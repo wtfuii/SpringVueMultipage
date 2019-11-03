@@ -1,0 +1,17 @@
+{# @pebvariable name="name" type="java.lang.String" #}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <a href="/first">First</a>
+    <a href="/second">Second</a>
+</div>
+{% block content %}
+Default Content
+{% endblock %}
+</body>
+</html>
