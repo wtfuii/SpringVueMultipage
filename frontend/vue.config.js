@@ -1,4 +1,4 @@
-const Chunks2JsonPlugin = require('chunks-2-json-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin')
 const fs = require('fs');
 
 function getEntries() {
@@ -15,10 +15,11 @@ function getEntries() {
 }
 
 module.exports = {
+  outputDir: "../src/main/resources/static",
   configureWebpack: {
     plugins: [
-      new Chunks2JsonPlugin({outputDir: 'dist/'})
+      new AssetsPlugin({path: "../src/main/resources/static"})
     ]
   },
-  pages: getEntries()
+  pages: getEntries(),
 }

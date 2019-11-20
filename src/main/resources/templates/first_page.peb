@@ -1,5 +1,7 @@
 {% extends "layout" %}
 
+{% block key %}first{% endblock %}
+
 {% block content %}
 First Page Content
 {% endblock %}

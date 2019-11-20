@@ -1,5 +1,6 @@
 {% extends "layout" %}
 
+{% block key %}second{% endblock %}
 {% block content %}
 Second Page Content
 {% endblock %}
