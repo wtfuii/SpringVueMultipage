@@ -58,5 +58,10 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "1.8"
 	}
-	dependsOn(jsBuild)
 }
+
+val bootJar by tasks
+bootJar.dependsOn(jsBuild)
+
+val processResources by tasks
+processResources.shouldRunAfter(jsBuild)
