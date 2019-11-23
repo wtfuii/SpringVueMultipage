@@ -1,11 +1,15 @@
 const AssetsPlugin = require('assets-webpack-plugin')
 const fs = require('fs');
 
+const entryPath = 'src/entries';
+
+function getEntriyFiles() {
+  return fs.readdirSync(entryPath);
+}
+
 function getEntries() {
-  const entryPath = 'src/entries';
-  const entryFiles = fs.readdirSync(entryPath);
   result = {}
-  entryFiles.forEach((entry) => {
+  getEntriyFiles().forEach((entry) => {
     const fileTitle = entry.split('.')
     result[fileTitle[0]] = {
       entry: entryPath + '/' + entry
@@ -15,6 +19,13 @@ function getEntries() {
 }
 
 module.exports = {
+  chainWebpack: function (config) {
+    getEntriyFiles().map(file => file.split('.')[0]).forEach(entryName => {
+      config.plugins.delete(`html-${entryName}`)
+      config.plugins.delete(`preload-${entryName}`)
+      config.plugins.delete(`prefetch-${entryName}`)
+    })
+  },
   outputDir: "../src/main/resources/static",
   configureWebpack: {
     plugins: [
