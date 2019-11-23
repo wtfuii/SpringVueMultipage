@@ -1,9 +1,14 @@
 {# @pebvariable name="name" type="java.lang.String" #}
+{% import 'macros/macros' %}
 
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {{ webpack_css("chunk-vendors") }}
+    {% block css  %}
+
+    {% endblock %}
 </head>
 <body>
 <div>
@@ -14,4 +19,8 @@
 Default Content
 {% endblock %}
 </body>
+{{ webpack_js("chunk-vendors") }}
+{% block js %}
+
+{% endblock %}
 </html>

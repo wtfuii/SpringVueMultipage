@@ -8,6 +8,7 @@ plugins {
 	kotlin("jvm") version "1.3.50"
 	kotlin("plugin.spring") version "1.3.50"
 }
+
 nodejs {
 	version = "13.1.0"
 	rootPath = "frontend"
@@ -40,6 +41,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
+	compile(group="org.json", name="json", version="20090211")
 }
 
 tasks.withType<Test> {

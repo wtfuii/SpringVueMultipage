@@ -1,0 +1,11 @@
+{% macro webpack_css(entryName) %}
+{% if entryName %}
+<link rel='stylesheet' type='text/css' href='{{ webpackCssPath(entryName) }}'>
+{% endif %}
+{% endmacro %}
+
+{% macro webpack_js(entryName) %}
+{% if entryName %}
+<script src='{{ webpackJsPath(entryName)}}'></script>
+{% endif %}
+{% endmacro %}

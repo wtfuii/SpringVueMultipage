@@ -1,6 +1,11 @@
+{% import 'macros/macros' %}
 {% extends "layout" %}
 
-{% block key %}second{% endblock %}
+{% block js %}{{ webpack_js("second") }}{% endblock %}
+{% block css %}{{ webpack_css("second") }} {% endblock %}
+
 {% block content %}
 Second Page Content
+<div id="app">
+</div>
 {% endblock %}

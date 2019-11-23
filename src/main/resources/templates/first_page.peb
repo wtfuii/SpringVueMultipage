@@ -1,7 +1,13 @@
+{% import 'macros/macros' %}
 {% extends "layout" %}
 
-{% block key %}first{% endblock %}
+{% block js %}{{ webpack_js("first") }}{% endblock %}
+{% block css %}{{ webpack_css("first") }} {% endblock %}
+
 
 {% block content %}
 First Page Content
+
+        <div id="app">
+        </div>
 {% endblock %}
