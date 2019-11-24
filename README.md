@@ -28,6 +28,9 @@ folder. Then include it in your Pebble template of choice using the following ta
 I chose Pebble as template engine because it supports inheritance and uses almost
 the same syntax as Jinja2 in the Python world.
 
+Due to the fact that page content can be rendered either on the frontend or on the backend,
+HMR is not supported with this boilerplate.
+
 To build a runnable JAR file that includes all the frontend assets, just run
 `bootJar` with Gradle.
 During development, run `bootRun` and `npm run watch` in parallel.
