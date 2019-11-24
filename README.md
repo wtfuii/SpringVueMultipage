@@ -22,8 +22,8 @@ To add a new JavaScript file as webpack entry, just add it to the `frontend/src/
 folder. Then include it in your Pebble template of choice using the following tags:
 ```
 {% import 'macros/macros' %}
-{% block js %}{{ webpack_js("second") }}{% endblock %}
-{% block css %}{{ webpack_css("second") }} {% endblock %}
+{% block js %}{{ webpack_js("myWebpackEntry") }}{% endblock %}
+{% block css %}{{ webpack_css("myWebpackEntry") }} {% endblock %}
 ```
 I chose Pebble as template engine because it supports inheritance and uses almost
 the same syntax as Jinja2 in the Python world.
