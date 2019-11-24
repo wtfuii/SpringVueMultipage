@@ -7,7 +7,6 @@
 
 {% block content %}
 First Page Content
-
-        <div id="app">
-        </div>
+<div id="app">
+</div>
 {% endblock %}
