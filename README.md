@@ -13,7 +13,7 @@ stack:
 Most of the modern JavaScript boilerplates support only single page
 applications.
 The main motivation behind this template was to show that a modern WebApp not always
-has to be a single page application. Use plain old HTML templates if it fits
+has to be a single page application. Use plain old HTML templates if they fit
 and use the whole Webpack toolchain if you need it. It can still make sense to render
 forms on the backend as data validation only needs to be performed once instead of 
 both in the backend and in the frontend.
@@ -28,6 +28,7 @@ folder. Then include it in your Pebble template of choice using the following ta
 I chose Pebble as template engine because it supports inheritance and uses almost
 the same syntax as Jinja2 in the Python world.
 
+To build a runnable JAR file that includes all the frontend assets, just run
+`bootJar` with Gradle.
 During development, run `bootRun` and `npm run watch` in parallel.
-If you know how to run Webpack in watch mode with Gradle while running the Spring app
-with `bootRun`, please open an issue.
+If you know how to run Webpack as well with `bootRun`, please open an issue.
